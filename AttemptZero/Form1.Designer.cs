@@ -341,6 +341,7 @@
             this.EmailVerifyPanel.Name = "EmailVerifyPanel";
             this.EmailVerifyPanel.Size = new System.Drawing.Size(415, 249);
             this.EmailVerifyPanel.TabIndex = 11;
+            this.EmailVerifyPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EmailVerifyPanel_Paint);
             // 
             // EmailVerifyCode
             // 

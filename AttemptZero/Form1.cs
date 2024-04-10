@@ -155,9 +155,9 @@ namespace AttemptZero
 
         private void SendCode_btn_Click(object sender, EventArgs e)
         {
-            Random rn = new Random();
+           
             SendCode();
-            string fromEmail = "twentydump20@gmail.com";
+            string fromEmail = "kickcamp06@gmail.com";
             string password = "0912309224827123150Dave";
             string toEmail = EmailVerifyText.Text;
             string subject = "Email Verification";
@@ -229,7 +229,7 @@ namespace AttemptZero
             }
         }
 
-     
+      
         private void UserNameRegisterInput_TextChanged(object sender, EventArgs e)
         {
             string input = UserNameRegisterInput.Text;
@@ -325,6 +325,10 @@ namespace AttemptZero
 
         }
 
+        private void EmailVerifyPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void LoginHeaderPanel_Paint(object sender, PaintEventArgs e)
         {
