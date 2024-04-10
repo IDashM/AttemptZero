@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace AttemptZero
 {
-    public partial class Customer : UserControl
+    public partial class UserControlBlank : UserControl
     {
-        public Customer()
+        public UserControlBlank()
         {
             InitializeComponent();
         }
 
-        private void Customer_Load(object sender, EventArgs e)
+        private void UserControlBlank_Load(object sender, EventArgs e)
         {
 
         }

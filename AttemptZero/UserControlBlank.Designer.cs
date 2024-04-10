@@ -1,6 +1,6 @@
 ﻿namespace AttemptZero
 {
-    partial class Customer
+    partial class UserControlBlank
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Customer
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(31, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Temp Text";
+            // 
+            // UserControlBlank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "Customer";
-            this.Size = new System.Drawing.Size(708, 499);
-            this.Load += new System.EventHandler(this.Customer_Load);
+            this.Controls.Add(this.label1);
+            this.Name = "UserControlBlank";
+            this.Size = new System.Drawing.Size(143, 100);
+            this.Load += new System.EventHandler(this.UserControlBlank_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -53,9 +53,18 @@
             this.LoginHeaderPanel = new System.Windows.Forms.Panel();
             this.OpenLogin_Btn = new System.Windows.Forms.Button();
             this.OpenToRegisterbtn = new System.Windows.Forms.Button();
+            this.EmailVerifyPanel = new System.Windows.Forms.Panel();
+            this.EmailVerifyCode = new System.Windows.Forms.TextBox();
+            this.EmailVerifyText = new System.Windows.Forms.TextBox();
+            this.VerifyCode = new System.Windows.Forms.Button();
+            this.SendCode_btn = new System.Windows.Forms.Button();
+            this.EmailVerifyLabel3 = new System.Windows.Forms.Label();
+            this.EmailVerifyLabel1 = new System.Windows.Forms.Label();
+            this.EmailVerifyLabel2 = new System.Windows.Forms.Label();
             this.Login_Panel.SuspendLayout();
             this.ToRegisterPanel.SuspendLayout();
             this.LoginHeaderPanel.SuspendLayout();
+            this.EmailVerifyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +86,7 @@
             this.Login_Panel.Controls.Add(this.PasswordInput);
             this.Login_Panel.Controls.Add(this.UsernameInput);
             this.Login_Panel.Controls.Add(this.label1);
-            this.Login_Panel.Location = new System.Drawing.Point(899, 109);
+            this.Login_Panel.Location = new System.Drawing.Point(891, 83);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(422, 302);
             this.Login_Panel.TabIndex = 2;
@@ -149,7 +158,7 @@
             this.ToRegisterPanel.Controls.Add(this.label3);
             this.ToRegisterPanel.Controls.Add(this.PasswordRegisterInput);
             this.ToRegisterPanel.Controls.Add(this.UserNameRegisterInput);
-            this.ToRegisterPanel.Location = new System.Drawing.Point(7, 68);
+            this.ToRegisterPanel.Location = new System.Drawing.Point(888, 270);
             this.ToRegisterPanel.Name = "ToRegisterPanel";
             this.ToRegisterPanel.Size = new System.Drawing.Size(745, 429);
             this.ToRegisterPanel.TabIndex = 7;
@@ -318,6 +327,90 @@
             this.OpenToRegisterbtn.UseVisualStyleBackColor = true;
             this.OpenToRegisterbtn.Click += new System.EventHandler(this.OpenToRegisterbtn_Click);
             // 
+            // EmailVerifyPanel
+            // 
+            this.EmailVerifyPanel.BackColor = System.Drawing.Color.DarkGreen;
+            this.EmailVerifyPanel.Controls.Add(this.EmailVerifyCode);
+            this.EmailVerifyPanel.Controls.Add(this.EmailVerifyText);
+            this.EmailVerifyPanel.Controls.Add(this.VerifyCode);
+            this.EmailVerifyPanel.Controls.Add(this.SendCode_btn);
+            this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel3);
+            this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel1);
+            this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel2);
+            this.EmailVerifyPanel.Location = new System.Drawing.Point(186, 213);
+            this.EmailVerifyPanel.Name = "EmailVerifyPanel";
+            this.EmailVerifyPanel.Size = new System.Drawing.Size(415, 249);
+            this.EmailVerifyPanel.TabIndex = 11;
+            // 
+            // EmailVerifyCode
+            // 
+            this.EmailVerifyCode.Location = new System.Drawing.Point(28, 180);
+            this.EmailVerifyCode.Name = "EmailVerifyCode";
+            this.EmailVerifyCode.Size = new System.Drawing.Size(232, 20);
+            this.EmailVerifyCode.TabIndex = 6;
+            this.EmailVerifyCode.TextChanged += new System.EventHandler(this.EmailVerifyCode_TextChanged);
+            // 
+            // EmailVerifyText
+            // 
+            this.EmailVerifyText.Location = new System.Drawing.Point(28, 119);
+            this.EmailVerifyText.Name = "EmailVerifyText";
+            this.EmailVerifyText.Size = new System.Drawing.Size(232, 20);
+            this.EmailVerifyText.TabIndex = 5;
+            this.EmailVerifyText.TextChanged += new System.EventHandler(this.EmailVerifyText_TextChanged);
+            // 
+            // VerifyCode
+            // 
+            this.VerifyCode.Location = new System.Drawing.Point(303, 172);
+            this.VerifyCode.Name = "VerifyCode";
+            this.VerifyCode.Size = new System.Drawing.Size(93, 35);
+            this.VerifyCode.TabIndex = 4;
+            this.VerifyCode.Text = "Verify";
+            this.VerifyCode.UseVisualStyleBackColor = true;
+            this.VerifyCode.Click += new System.EventHandler(this.VerifyCode_Click);
+            // 
+            // SendCode_btn
+            // 
+            this.SendCode_btn.Location = new System.Drawing.Point(303, 103);
+            this.SendCode_btn.Name = "SendCode_btn";
+            this.SendCode_btn.Size = new System.Drawing.Size(93, 35);
+            this.SendCode_btn.TabIndex = 3;
+            this.SendCode_btn.Text = "Send Code";
+            this.SendCode_btn.UseVisualStyleBackColor = true;
+            this.SendCode_btn.Click += new System.EventHandler(this.SendCode_btn_Click);
+            // 
+            // EmailVerifyLabel3
+            // 
+            this.EmailVerifyLabel3.AutoSize = true;
+            this.EmailVerifyLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.EmailVerifyLabel3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EmailVerifyLabel3.Location = new System.Drawing.Point(23, 151);
+            this.EmailVerifyLabel3.Name = "EmailVerifyLabel3";
+            this.EmailVerifyLabel3.Size = new System.Drawing.Size(64, 26);
+            this.EmailVerifyLabel3.TabIndex = 2;
+            this.EmailVerifyLabel3.Text = "Code";
+            // 
+            // EmailVerifyLabel1
+            // 
+            this.EmailVerifyLabel1.AutoSize = true;
+            this.EmailVerifyLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.EmailVerifyLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EmailVerifyLabel1.Location = new System.Drawing.Point(80, 27);
+            this.EmailVerifyLabel1.Name = "EmailVerifyLabel1";
+            this.EmailVerifyLabel1.Size = new System.Drawing.Size(281, 39);
+            this.EmailVerifyLabel1.TabIndex = 1;
+            this.EmailVerifyLabel1.Text = "Email Verification";
+            // 
+            // EmailVerifyLabel2
+            // 
+            this.EmailVerifyLabel2.AutoSize = true;
+            this.EmailVerifyLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.EmailVerifyLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EmailVerifyLabel2.Location = new System.Drawing.Point(23, 90);
+            this.EmailVerifyLabel2.Name = "EmailVerifyLabel2";
+            this.EmailVerifyLabel2.Size = new System.Drawing.Size(68, 26);
+            this.EmailVerifyLabel2.TabIndex = 0;
+            this.EmailVerifyLabel2.Text = "Email";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +419,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(933, 521);
+            this.Controls.Add(this.EmailVerifyPanel);
             this.Controls.Add(this.ToRegisterPanel);
             this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.LoginHeaderPanel);
@@ -338,6 +432,8 @@
             this.ToRegisterPanel.ResumeLayout(false);
             this.ToRegisterPanel.PerformLayout();
             this.LoginHeaderPanel.ResumeLayout(false);
+            this.EmailVerifyPanel.ResumeLayout(false);
+            this.EmailVerifyPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -369,6 +465,14 @@
         private System.Windows.Forms.TextBox LastNameRegisterInput;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox FirstNameRegisterInput;
+        private System.Windows.Forms.Panel EmailVerifyPanel;
+        private System.Windows.Forms.Button VerifyCode;
+        private System.Windows.Forms.Button SendCode_btn;
+        private System.Windows.Forms.Label EmailVerifyLabel3;
+        private System.Windows.Forms.Label EmailVerifyLabel1;
+        private System.Windows.Forms.Label EmailVerifyLabel2;
+        private System.Windows.Forms.TextBox EmailVerifyCode;
+        private System.Windows.Forms.TextBox EmailVerifyText;
     }
 }
 
