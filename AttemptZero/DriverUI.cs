@@ -5,13 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AttemptZero
 {
     public partial class DriverUI : Form
     {
+        bool isWindowOpen = false;
         public DriverUI()
         {
             InitializeComponent();
@@ -22,6 +25,25 @@ namespace AttemptZero
             Form1 f = new Form1();
             this.Hide();
             f.Show();
+        }
+
+        private void DriverUI_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void DriverIsOn()
+        {
+            while (ChecksDriverIsOn.Visible)
+            {
+                isWindowOpen = true;
+            }
+            isWindowOpen = false;
+        }
+
+        private void gameThread()
+        {
+            Thread newThread = new Thread(() => DriverIsOn());
+            newThread.Start();
         }
     }
 }

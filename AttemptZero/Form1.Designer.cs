@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Login_Panel = new System.Windows.Forms.Panel();
             this.LoginSubmit_Btn = new System.Windows.Forms.Button();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.UserNameLabel = new System.Windows.Forms.Label();
-            this.PasswordInput = new System.Windows.Forms.TextBox();
-            this.UsernameInput = new System.Windows.Forms.TextBox();
             this.ToRegisterPanel = new System.Windows.Forms.Panel();
             this.FirstNameRegisterInput = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,6 +46,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.PasswordRegisterInput = new System.Windows.Forms.TextBox();
             this.UserNameRegisterInput = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.PasswordInput = new System.Windows.Forms.TextBox();
+            this.UsernameInput = new System.Windows.Forms.TextBox();
             this.LoginHeaderPanel = new System.Windows.Forms.Panel();
             this.OpenLogin_Btn = new System.Windows.Forms.Button();
             this.OpenToRegisterbtn = new System.Windows.Forms.Button();
@@ -81,12 +81,13 @@
             // 
             this.Login_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.Login_Panel.Controls.Add(this.LoginSubmit_Btn);
+            this.Login_Panel.Controls.Add(this.ToRegisterPanel);
             this.Login_Panel.Controls.Add(this.PasswordLabel);
             this.Login_Panel.Controls.Add(this.UserNameLabel);
             this.Login_Panel.Controls.Add(this.PasswordInput);
             this.Login_Panel.Controls.Add(this.UsernameInput);
             this.Login_Panel.Controls.Add(this.label1);
-            this.Login_Panel.Location = new System.Drawing.Point(891, 83);
+            this.Login_Panel.Location = new System.Drawing.Point(389, 111);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(422, 302);
             this.Login_Panel.TabIndex = 2;
@@ -102,44 +103,6 @@
             this.LoginSubmit_Btn.Text = "Login";
             this.LoginSubmit_Btn.UseVisualStyleBackColor = true;
             this.LoginSubmit_Btn.Click += new System.EventHandler(this.LoginSubmit_Btn_Click);
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(93, 177);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(143, 33);
-            this.PasswordLabel.TabIndex = 5;
-            this.PasswordLabel.Text = "Password";
-            // 
-            // UserNameLabel
-            // 
-            this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.Location = new System.Drawing.Point(93, 84);
-            this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(155, 33);
-            this.UserNameLabel.TabIndex = 4;
-            this.UserNameLabel.Text = "UserName";
-            // 
-            // PasswordInput
-            // 
-            this.PasswordInput.Location = new System.Drawing.Point(87, 213);
-            this.PasswordInput.Name = "PasswordInput";
-            this.PasswordInput.PasswordChar = '&';
-            this.PasswordInput.Size = new System.Drawing.Size(250, 20);
-            this.PasswordInput.TabIndex = 3;
-            this.PasswordInput.TextChanged += new System.EventHandler(this.PasswordInput_TextChanged);
-            // 
-            // UsernameInput
-            // 
-            this.UsernameInput.Location = new System.Drawing.Point(87, 122);
-            this.UsernameInput.Name = "UsernameInput";
-            this.UsernameInput.Size = new System.Drawing.Size(250, 20);
-            this.UsernameInput.TabIndex = 2;
-            this.UsernameInput.Text = "Username";
-            this.UsernameInput.TextChanged += new System.EventHandler(this.UsernameInput_TextChanged);
             // 
             // ToRegisterPanel
             // 
@@ -158,7 +121,7 @@
             this.ToRegisterPanel.Controls.Add(this.label3);
             this.ToRegisterPanel.Controls.Add(this.PasswordRegisterInput);
             this.ToRegisterPanel.Controls.Add(this.UserNameRegisterInput);
-            this.ToRegisterPanel.Location = new System.Drawing.Point(888, 270);
+            this.ToRegisterPanel.Location = new System.Drawing.Point(3, 302);
             this.ToRegisterPanel.Name = "ToRegisterPanel";
             this.ToRegisterPanel.Size = new System.Drawing.Size(745, 429);
             this.ToRegisterPanel.TabIndex = 7;
@@ -296,6 +259,46 @@
             this.UserNameRegisterInput.Text = "Username";
             this.UserNameRegisterInput.TextChanged += new System.EventHandler(this.UserNameRegisterInput_TextChanged);
             // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Location = new System.Drawing.Point(93, 177);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(143, 33);
+            this.PasswordLabel.TabIndex = 5;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.Location = new System.Drawing.Point(93, 84);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(155, 33);
+            this.UserNameLabel.TabIndex = 4;
+            this.UserNameLabel.Text = "UserName";
+            // 
+            // PasswordInput
+            // 
+            this.PasswordInput.Location = new System.Drawing.Point(87, 213);
+            this.PasswordInput.Name = "PasswordInput";
+            this.PasswordInput.PasswordChar = '&';
+            this.PasswordInput.Size = new System.Drawing.Size(250, 20);
+            this.PasswordInput.TabIndex = 3;
+            this.PasswordInput.Click += new System.EventHandler(this.PasswordInputClick);
+            this.PasswordInput.TextChanged += new System.EventHandler(this.PasswordInput_TextChanged);
+            // 
+            // UsernameInput
+            // 
+            this.UsernameInput.Location = new System.Drawing.Point(87, 122);
+            this.UsernameInput.Name = "UsernameInput";
+            this.UsernameInput.Size = new System.Drawing.Size(250, 20);
+            this.UsernameInput.TabIndex = 2;
+            this.UsernameInput.Text = "Username";
+            this.UsernameInput.Click += new System.EventHandler(this.UserNameInputClick);
+            this.UsernameInput.TextChanged += new System.EventHandler(this.UsernameInput_TextChanged);
+            // 
             // LoginHeaderPanel
             // 
             this.LoginHeaderPanel.BackColor = System.Drawing.Color.Green;
@@ -337,7 +340,7 @@
             this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel3);
             this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel1);
             this.EmailVerifyPanel.Controls.Add(this.EmailVerifyLabel2);
-            this.EmailVerifyPanel.Location = new System.Drawing.Point(186, 213);
+            this.EmailVerifyPanel.Location = new System.Drawing.Point(128, 435);
             this.EmailVerifyPanel.Name = "EmailVerifyPanel";
             this.EmailVerifyPanel.Size = new System.Drawing.Size(415, 249);
             this.EmailVerifyPanel.TabIndex = 11;
@@ -421,7 +424,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(933, 521);
             this.Controls.Add(this.EmailVerifyPanel);
-            this.Controls.Add(this.ToRegisterPanel);
             this.Controls.Add(this.Login_Panel);
             this.Controls.Add(this.LoginHeaderPanel);
             this.MinimumSize = new System.Drawing.Size(456, 489);

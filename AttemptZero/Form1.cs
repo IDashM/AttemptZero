@@ -296,6 +296,10 @@ namespace AttemptZero
 
         }
 
+        private void UserNameInput_Click() {
+            UsernameInput.Text = "";
+        }
+
         private void PasswordInput_TextChanged(object sender, EventArgs e)
         {
 
@@ -328,6 +332,16 @@ namespace AttemptZero
         private void EmailVerifyPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void UserNameInputClick(object sender, EventArgs e)
+        {
+            UsernameInput.Text = "";
+        }
+
+        private void PasswordInputClick(object sender, EventArgs e)
+        {
+            PasswordInput.Text = "";
         }
 
         private void LoginHeaderPanel_Paint(object sender, PaintEventArgs e)

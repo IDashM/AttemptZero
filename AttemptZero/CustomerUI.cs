@@ -31,6 +31,7 @@ namespace AttemptZero
             for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
+                ucblank.Dock = DockStyle.Fill;
                 DaysCalendarPanel.Controls.Add(ucblank);
             }
         }
