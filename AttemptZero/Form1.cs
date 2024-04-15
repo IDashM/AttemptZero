@@ -19,6 +19,7 @@ namespace AttemptZero
     public partial class Form1 : Form
     {
         //VARIABLES
+        string username;
         int MaxUserNameInput = 30, MaxFirstNameInput = 30, MaxLastNameInput = 30, MaxAddressInput = 50, MaxContactNumberInput = 11;
         bool toCheckEmailVerification = false;
         String PassKey;
@@ -59,6 +60,7 @@ namespace AttemptZero
                 {
                     cmd.Parameters.AddWithValue("@UserName", UsernameInput.Text);
                     cmd.Parameters.AddWithValue("@Password", PasswordInput.Text);
+                    
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -102,6 +104,9 @@ namespace AttemptZero
             Login_Panel.Hide();
             EmailVerifyPanel.Location = new Point(93, 146);
             EmailVerifyPanel.Visible = true;
+        }
+        public string getUserName() {
+            return username;
         }
         private void ContactNumberRegisterInput_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -12,9 +12,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AttemptZero
 {
+
     public partial class DriverUI : Form
     {
-        bool isWindowOpen = false;
+        bool isWindowOpen;
         public DriverUI()
         {
             InitializeComponent();

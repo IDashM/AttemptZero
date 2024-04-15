@@ -28,43 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.AddDriver = new System.Windows.Forms.Button();
+            this.History_btn = new System.Windows.Forms.Button();
+            this.Sales_btn = new System.Windows.Forms.Button();
+            this.CustomerChatBox = new System.Windows.Forms.Button();
+            this.ChatBoxPanel = new System.Windows.Forms.Panel();
+            this.UserShowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.userChatBoxInterface1 = new AttemptZero.UserChatBoxInterface();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AdminDashboardlabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.SalesOnMonth = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.sidebar = new System.Windows.Forms.Panel();
-            this.UserManagement_Panel = new System.Windows.Forms.Panel();
-            this.UserManagement_btn = new System.Windows.Forms.Button();
-            this.AdminDashboard_Panel = new System.Windows.Forms.Panel();
-            this.AdminDashboard_btn = new System.Windows.Forms.Button();
-            this.AddDriver_Panel = new System.Windows.Forms.Panel();
-            this.AddDriver_btn = new System.Windows.Forms.Button();
-            this.RecentOrder_Panel = new System.Windows.Forms.Panel();
-            this.RecentOrder_btn = new System.Windows.Forms.Button();
-            this.SideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.AdminDashboardPanel = new System.Windows.Forms.Panel();
+            this.AddDriverPanel = new System.Windows.Forms.Panel();
+            this.SalesPanel = new System.Windows.Forms.Panel();
+            this.HistoryPurchasePanel = new System.Windows.Forms.Panel();
+            this.DashboardHomePanel = new System.Windows.Forms.Panel();
+            this.panel3.SuspendLayout();
+            this.ChatBoxPanel.SuspendLayout();
+            this.UserShowPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesOnMonth)).BeginInit();
-            this.sidebar.SuspendLayout();
-            this.UserManagement_Panel.SuspendLayout();
-            this.AdminDashboard_Panel.SuspendLayout();
-            this.AddDriver_Panel.SuspendLayout();
-            this.RecentOrder_Panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel3.Controls.Add(this.AddDriverPanel);
+            this.panel3.Controls.Add(this.SalesPanel);
+            this.panel3.Controls.Add(this.HistoryPurchasePanel);
+            this.panel3.Controls.Add(this.DashboardHomePanel);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.ChatBoxPanel);
+            this.panel3.Controls.Add(this.CustomerChatBox);
+            this.panel3.Controls.Add(this.Sales_btn);
+            this.panel3.Controls.Add(this.History_btn);
+            this.panel3.Controls.Add(this.AddDriver);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(104, 550);
+            this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
+            // 
+            // AddDriver
+            // 
+            this.AddDriver.BackColor = System.Drawing.Color.Chartreuse;
+            this.AddDriver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.AddDriver.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.AddDriver.Location = new System.Drawing.Point(0, 92);
+            this.AddDriver.Name = "AddDriver";
+            this.AddDriver.Size = new System.Drawing.Size(104, 50);
+            this.AddDriver.TabIndex = 0;
+            this.AddDriver.Text = "🚗";
+            this.AddDriver.UseVisualStyleBackColor = false;
+            // 
+            // History_btn
+            // 
+            this.History_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.History_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.History_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.History_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.History_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.History_btn.Location = new System.Drawing.Point(0, 148);
+            this.History_btn.Name = "History_btn";
+            this.History_btn.Size = new System.Drawing.Size(104, 50);
+            this.History_btn.TabIndex = 1;
+            this.History_btn.Text = "📋";
+            this.History_btn.UseVisualStyleBackColor = false;
+            // 
+            // Sales_btn
+            // 
+            this.Sales_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.Sales_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sales_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Sales_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Sales_btn.Location = new System.Drawing.Point(0, 204);
+            this.Sales_btn.Name = "Sales_btn";
+            this.Sales_btn.Size = new System.Drawing.Size(104, 50);
+            this.Sales_btn.TabIndex = 2;
+            this.Sales_btn.Text = "🛒";
+            this.Sales_btn.UseVisualStyleBackColor = false;
+            // 
+            // CustomerChatBox
+            // 
+            this.CustomerChatBox.BackColor = System.Drawing.Color.Chartreuse;
+            this.CustomerChatBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CustomerChatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomerChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.CustomerChatBox.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.CustomerChatBox.Location = new System.Drawing.Point(0, 260);
+            this.CustomerChatBox.Name = "CustomerChatBox";
+            this.CustomerChatBox.Size = new System.Drawing.Size(104, 50);
+            this.CustomerChatBox.TabIndex = 3;
+            this.CustomerChatBox.Text = "💬";
+            this.CustomerChatBox.UseVisualStyleBackColor = false;
+            this.CustomerChatBox.Click += new System.EventHandler(this.CustomerChatBox_Click);
+            // 
+            // ChatBoxPanel
+            // 
+            this.ChatBoxPanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.ChatBoxPanel.Controls.Add(this.UserShowPanel);
+            this.ChatBoxPanel.Location = new System.Drawing.Point(55, 504);
+            this.ChatBoxPanel.Name = "ChatBoxPanel";
+            this.ChatBoxPanel.Size = new System.Drawing.Size(841, 439);
+            this.ChatBoxPanel.TabIndex = 2;
+            this.ChatBoxPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChatBoxPanel_Paint);
+            // 
+            // UserShowPanel
+            // 
+            this.UserShowPanel.Controls.Add(this.userChatBoxInterface1);
+            this.UserShowPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UserShowPanel.Location = new System.Drawing.Point(528, 0);
+            this.UserShowPanel.Name = "UserShowPanel";
+            this.UserShowPanel.Size = new System.Drawing.Size(313, 439);
+            this.UserShowPanel.TabIndex = 1;
+            // 
+            // userChatBoxInterface1
+            // 
+            this.userChatBoxInterface1.Icon = null;
+            this.userChatBoxInterface1.Location = new System.Drawing.Point(3, 3);
+            this.userChatBoxInterface1.Name = "userChatBoxInterface1";
+            this.userChatBoxInterface1.Size = new System.Drawing.Size(303, 100);
+            this.userChatBoxInterface1.TabIndex = 0;
+            this.userChatBoxInterface1.Title = null;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Chartreuse;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.button3.Location = new System.Drawing.Point(3, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(104, 50);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "🏡";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
             this.panel1.Controls.Add(this.AdminDashboardlabel);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(104, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 47);
+            this.panel1.Size = new System.Drawing.Size(899, 47);
             this.panel1.TabIndex = 0;
             // 
             // AdminDashboardlabel
@@ -72,217 +184,92 @@
             this.AdminDashboardlabel.AutoSize = true;
             this.AdminDashboardlabel.BackColor = System.Drawing.Color.LimeGreen;
             this.AdminDashboardlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.AdminDashboardlabel.Location = new System.Drawing.Point(271, 9);
+            this.AdminDashboardlabel.Location = new System.Drawing.Point(6, 9);
             this.AdminDashboardlabel.Name = "AdminDashboardlabel";
             this.AdminDashboardlabel.Size = new System.Drawing.Size(230, 31);
             this.AdminDashboardlabel.TabIndex = 0;
             this.AdminDashboardlabel.Text = "Admin Dashboard";
             this.AdminDashboardlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel2
+            // AdminDashboardPanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.GhostWhite;
-            this.panel2.Controls.Add(this.SalesOnMonth);
-            this.panel2.Controls.Add(this.sidebar);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(944, 450);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.AdminDashboardPanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.AdminDashboardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminDashboardPanel.Location = new System.Drawing.Point(104, 47);
+            this.AdminDashboardPanel.Name = "AdminDashboardPanel";
+            this.AdminDashboardPanel.Size = new System.Drawing.Size(899, 503);
+            this.AdminDashboardPanel.TabIndex = 3;
+            this.AdminDashboardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminDashboardPanel_Paint);
             // 
-            // SalesOnMonth
+            // AddDriverPanel
             // 
-            chartArea2.Name = "ChartArea1";
-            this.SalesOnMonth.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.SalesOnMonth.Legends.Add(legend2);
-            this.SalesOnMonth.Location = new System.Drawing.Point(277, 67);
-            this.SalesOnMonth.Name = "SalesOnMonth";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.SalesOnMonth.Series.Add(series2);
-            this.SalesOnMonth.Size = new System.Drawing.Size(300, 187);
-            this.SalesOnMonth.TabIndex = 1;
-            this.SalesOnMonth.Text = "chart1";
+            this.AddDriverPanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.AddDriverPanel.Location = new System.Drawing.Point(88, 350);
+            this.AddDriverPanel.Name = "AddDriverPanel";
+            this.AddDriverPanel.Size = new System.Drawing.Size(841, 439);
+            this.AddDriverPanel.TabIndex = 4;
             // 
-            // sidebar
+            // SalesPanel
             // 
-            this.sidebar.BackColor = System.Drawing.Color.LimeGreen;
-            this.sidebar.Controls.Add(this.UserManagement_Panel);
-            this.sidebar.Controls.Add(this.AdminDashboard_Panel);
-            this.sidebar.Controls.Add(this.AddDriver_Panel);
-            this.sidebar.Controls.Add(this.RecentOrder_Panel);
-            this.sidebar.Location = new System.Drawing.Point(0, 46);
-            this.sidebar.MaximumSize = new System.Drawing.Size(191, 404);
-            this.sidebar.MinimumSize = new System.Drawing.Size(65, 404);
-            this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(65, 404);
-            this.sidebar.TabIndex = 0;
-            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.SalesPanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.SalesPanel.Location = new System.Drawing.Point(33, 507);
+            this.SalesPanel.Name = "SalesPanel";
+            this.SalesPanel.Size = new System.Drawing.Size(841, 439);
+            this.SalesPanel.TabIndex = 5;
             // 
-            // UserManagement_Panel
+            // HistoryPurchasePanel
             // 
-            this.UserManagement_Panel.Controls.Add(this.UserManagement_btn);
-            this.UserManagement_Panel.Location = new System.Drawing.Point(3, 233);
-            this.UserManagement_Panel.Name = "UserManagement_Panel";
-            this.UserManagement_Panel.Size = new System.Drawing.Size(193, 52);
-            this.UserManagement_Panel.TabIndex = 4;
+            this.HistoryPurchasePanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.HistoryPurchasePanel.Location = new System.Drawing.Point(58, 388);
+            this.HistoryPurchasePanel.Name = "HistoryPurchasePanel";
+            this.HistoryPurchasePanel.Size = new System.Drawing.Size(841, 439);
+            this.HistoryPurchasePanel.TabIndex = 4;
             // 
-            // UserManagement_btn
+            // DashboardHomePanel
             // 
-            this.UserManagement_btn.BackColor = System.Drawing.Color.PaleGreen;
-            this.UserManagement_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserManagement_btn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UserManagement_btn.FlatAppearance.BorderSize = 0;
-            this.UserManagement_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserManagement_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.UserManagement_btn.Location = new System.Drawing.Point(0, 0);
-            this.UserManagement_btn.Name = "UserManagement_btn";
-            this.UserManagement_btn.Size = new System.Drawing.Size(193, 52);
-            this.UserManagement_btn.TabIndex = 0;
-            this.UserManagement_btn.Text = "  👤     Users";
-            this.UserManagement_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UserManagement_btn.UseVisualStyleBackColor = false;
-            // 
-            // AdminDashboard_Panel
-            // 
-            this.AdminDashboard_Panel.BackColor = System.Drawing.Color.Transparent;
-            this.AdminDashboard_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.AdminDashboard_Panel.Controls.Add(this.AdminDashboard_btn);
-            this.AdminDashboard_Panel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.AdminDashboard_Panel.Location = new System.Drawing.Point(3, 75);
-            this.AdminDashboard_Panel.Name = "AdminDashboard_Panel";
-            this.AdminDashboard_Panel.Size = new System.Drawing.Size(193, 58);
-            this.AdminDashboard_Panel.TabIndex = 1;
-            // 
-            // AdminDashboard_btn
-            // 
-            this.AdminDashboard_btn.BackColor = System.Drawing.Color.PaleGreen;
-            this.AdminDashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AdminDashboard_btn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminDashboard_btn.FlatAppearance.BorderSize = 0;
-            this.AdminDashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AdminDashboard_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.AdminDashboard_btn.ForeColor = System.Drawing.Color.Black;
-            this.AdminDashboard_btn.Location = new System.Drawing.Point(0, 0);
-            this.AdminDashboard_btn.Name = "AdminDashboard_btn";
-            this.AdminDashboard_btn.Size = new System.Drawing.Size(193, 58);
-            this.AdminDashboard_btn.TabIndex = 0;
-            this.AdminDashboard_btn.Text = "📅   Panel";
-            this.AdminDashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AdminDashboard_btn.UseVisualStyleBackColor = false;
-            // 
-            // AddDriver_Panel
-            // 
-            this.AddDriver_Panel.Controls.Add(this.AddDriver_btn);
-            this.AddDriver_Panel.Location = new System.Drawing.Point(3, 139);
-            this.AddDriver_Panel.Name = "AddDriver_Panel";
-            this.AddDriver_Panel.Size = new System.Drawing.Size(190, 41);
-            this.AddDriver_Panel.TabIndex = 2;
-            // 
-            // AddDriver_btn
-            // 
-            this.AddDriver_btn.BackColor = System.Drawing.Color.PaleGreen;
-            this.AddDriver_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddDriver_btn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddDriver_btn.FlatAppearance.BorderSize = 0;
-            this.AddDriver_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddDriver_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.AddDriver_btn.Location = new System.Drawing.Point(0, 0);
-            this.AddDriver_btn.Name = "AddDriver_btn";
-            this.AddDriver_btn.Size = new System.Drawing.Size(190, 41);
-            this.AddDriver_btn.TabIndex = 0;
-            this.AddDriver_btn.Text = "🚗    Add ";
-            this.AddDriver_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddDriver_btn.UseVisualStyleBackColor = false;
-            this.AddDriver_btn.Click += new System.EventHandler(this.AddDriver_btn_Click);
-            // 
-            // RecentOrder_Panel
-            // 
-            this.RecentOrder_Panel.Controls.Add(this.RecentOrder_btn);
-            this.RecentOrder_Panel.Location = new System.Drawing.Point(3, 186);
-            this.RecentOrder_Panel.Name = "RecentOrder_Panel";
-            this.RecentOrder_Panel.Size = new System.Drawing.Size(190, 41);
-            this.RecentOrder_Panel.TabIndex = 3;
-            // 
-            // RecentOrder_btn
-            // 
-            this.RecentOrder_btn.BackColor = System.Drawing.Color.PaleGreen;
-            this.RecentOrder_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RecentOrder_btn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RecentOrder_btn.FlatAppearance.BorderSize = 0;
-            this.RecentOrder_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RecentOrder_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.RecentOrder_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RecentOrder_btn.Location = new System.Drawing.Point(0, 0);
-            this.RecentOrder_btn.Name = "RecentOrder_btn";
-            this.RecentOrder_btn.Size = new System.Drawing.Size(190, 41);
-            this.RecentOrder_btn.TabIndex = 0;
-            this.RecentOrder_btn.Text = "🛒   Order";
-            this.RecentOrder_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RecentOrder_btn.UseVisualStyleBackColor = false;
-            this.RecentOrder_btn.Click += new System.EventHandler(this.RecentOrder_btn_Click);
-            // 
-            // SideBarTimer
-            // 
-            this.SideBarTimer.Tick += new System.EventHandler(this.SideBarTimer_Tick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "🗃️";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.DashboardHomePanel.BackColor = System.Drawing.Color.PaleGreen;
+            this.DashboardHomePanel.Location = new System.Drawing.Point(12, 523);
+            this.DashboardHomePanel.Name = "DashboardHomePanel";
+            this.DashboardHomePanel.Size = new System.Drawing.Size(841, 503);
+            this.DashboardHomePanel.TabIndex = 5;
             // 
             // AdminUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 450);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1003, 550);
+            this.Controls.Add(this.AdminDashboardPanel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Name = "AdminUI";
             this.Text = " ";
             this.Load += new System.EventHandler(this.AdminUI_Load);
+            this.panel3.ResumeLayout(false);
+            this.ChatBoxPanel.ResumeLayout(false);
+            this.UserShowPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesOnMonth)).EndInit();
-            this.sidebar.ResumeLayout(false);
-            this.UserManagement_Panel.ResumeLayout(false);
-            this.AdminDashboard_Panel.ResumeLayout(false);
-            this.AddDriver_Panel.ResumeLayout(false);
-            this.RecentOrder_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label AdminDashboardlabel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel sidebar;
-        private System.Windows.Forms.Panel AddDriver_Panel;
-        private System.Windows.Forms.Button AddDriver_btn;
-        private System.Windows.Forms.Panel AdminDashboard_Panel;
-        private System.Windows.Forms.Button AdminDashboard_btn;
-        private System.Windows.Forms.Panel UserManagement_Panel;
-        private System.Windows.Forms.Button UserManagement_btn;
-        private System.Windows.Forms.Panel RecentOrder_Panel;
-        private System.Windows.Forms.Button RecentOrder_btn;
-        private System.Windows.Forms.DataVisualization.Charting.Chart SalesOnMonth;
-        private System.Windows.Forms.Timer SideBarTimer;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel ChatBoxPanel;
+        private System.Windows.Forms.FlowLayoutPanel UserShowPanel;
+        private UserChatBoxInterface userChatBoxInterface1;
+        private System.Windows.Forms.Button CustomerChatBox;
+        private System.Windows.Forms.Button Sales_btn;
+        private System.Windows.Forms.Button History_btn;
+        private System.Windows.Forms.Button AddDriver;
+        private System.Windows.Forms.Panel AdminDashboardPanel;
+        private System.Windows.Forms.Panel AddDriverPanel;
+        private System.Windows.Forms.Panel SalesPanel;
+        private System.Windows.Forms.Panel HistoryPurchasePanel;
+        private System.Windows.Forms.Panel DashboardHomePanel;
     }
 }
