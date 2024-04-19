@@ -28,96 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DaysCalendarPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.nextCustomerCalendar = new System.Windows.Forms.Button();
             this.PrevCustomerCalendar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.SideHeaderPanel = new System.Windows.Forms.Panel();
+            this.Dashboard_btn = new System.Windows.Forms.Button();
+            this.UserInformation_btn = new System.Windows.Forms.Button();
+            this.CustomerChatBox = new System.Windows.Forms.Button();
+            this.History_btn = new System.Windows.Forms.Button();
+            this.Order_btn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SideHeaderPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DaysCalendarPanel
-            // 
-            this.DaysCalendarPanel.Location = new System.Drawing.Point(0, 128);
-            this.DaysCalendarPanel.Name = "DaysCalendarPanel";
-            this.DaysCalendarPanel.Size = new System.Drawing.Size(985, 428);
-            this.DaysCalendarPanel.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(12, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sunday";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label2.Location = new System.Drawing.Point(166, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Monday";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(436, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Wednesday";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label4.Location = new System.Drawing.Point(311, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tuesday";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(739, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 24);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Friday";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(588, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 24);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Thursday";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(878, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Saturday";
             // 
             // nextCustomerCalendar
             // 
@@ -137,52 +60,143 @@
             this.PrevCustomerCalendar.Text = "Previous";
             this.PrevCustomerCalendar.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // SideHeaderPanel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.Location = new System.Drawing.Point(12, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 24);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Customer Calendar";
+            this.SideHeaderPanel.BackColor = System.Drawing.Color.LimeGreen;
+            this.SideHeaderPanel.Controls.Add(this.Dashboard_btn);
+            this.SideHeaderPanel.Controls.Add(this.UserInformation_btn);
+            this.SideHeaderPanel.Controls.Add(this.CustomerChatBox);
+            this.SideHeaderPanel.Controls.Add(this.History_btn);
+            this.SideHeaderPanel.Controls.Add(this.Order_btn);
+            this.SideHeaderPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideHeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.SideHeaderPanel.Name = "SideHeaderPanel";
+            this.SideHeaderPanel.Size = new System.Drawing.Size(108, 617);
+            this.SideHeaderPanel.TabIndex = 11;
+            // 
+            // Dashboard_btn
+            // 
+            this.Dashboard_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.Dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Dashboard_btn.Location = new System.Drawing.Point(4, 181);
+            this.Dashboard_btn.Name = "Dashboard_btn";
+            this.Dashboard_btn.Size = new System.Drawing.Size(104, 50);
+            this.Dashboard_btn.TabIndex = 17;
+            this.Dashboard_btn.Text = "🏡";
+            this.Dashboard_btn.UseVisualStyleBackColor = false;
+            // 
+            // UserInformation_btn
+            // 
+            this.UserInformation_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.UserInformation_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserInformation_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UserInformation_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.UserInformation_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.UserInformation_btn.Location = new System.Drawing.Point(3, 53);
+            this.UserInformation_btn.Name = "UserInformation_btn";
+            this.UserInformation_btn.Size = new System.Drawing.Size(104, 50);
+            this.UserInformation_btn.TabIndex = 16;
+            this.UserInformation_btn.Text = "👤";
+            this.UserInformation_btn.UseVisualStyleBackColor = false;
+            // 
+            // CustomerChatBox
+            // 
+            this.CustomerChatBox.BackColor = System.Drawing.Color.Chartreuse;
+            this.CustomerChatBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CustomerChatBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomerChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.CustomerChatBox.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.CustomerChatBox.Location = new System.Drawing.Point(4, 349);
+            this.CustomerChatBox.Name = "CustomerChatBox";
+            this.CustomerChatBox.Size = new System.Drawing.Size(104, 50);
+            this.CustomerChatBox.TabIndex = 15;
+            this.CustomerChatBox.Text = "💬";
+            this.CustomerChatBox.UseVisualStyleBackColor = false;
+            // 
+            // History_btn
+            // 
+            this.History_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.History_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.History_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.History_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.History_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.History_btn.Location = new System.Drawing.Point(4, 293);
+            this.History_btn.Name = "History_btn";
+            this.History_btn.Size = new System.Drawing.Size(104, 50);
+            this.History_btn.TabIndex = 13;
+            this.History_btn.Text = "📋";
+            this.History_btn.UseVisualStyleBackColor = false;
+            // 
+            // Order_btn
+            // 
+            this.Order_btn.BackColor = System.Drawing.Color.Chartreuse;
+            this.Order_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Order_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Order_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.Order_btn.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Order_btn.Location = new System.Drawing.Point(4, 237);
+            this.Order_btn.Name = "Order_btn";
+            this.Order_btn.Size = new System.Drawing.Size(104, 50);
+            this.Order_btn.TabIndex = 14;
+            this.Order_btn.Text = "🛒";
+            this.Order_btn.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::AttemptZero.Properties.Resources.CustomerFrontPage;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(108, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(881, 617);
+            this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
+            this.label1.Location = new System.Drawing.Point(326, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 54);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Dashboard";
             // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(989, 617);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SideHeaderPanel);
             this.Controls.Add(this.PrevCustomerCalendar);
             this.Controls.Add(this.nextCustomerCalendar);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DaysCalendarPanel);
             this.Name = "CustomerUI";
             this.Text = "CustomerUI";
             this.Load += new System.EventHandler(this.CustomerUI_Load);
+            this.SideHeaderPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel DaysCalendarPanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button nextCustomerCalendar;
         private System.Windows.Forms.Button PrevCustomerCalendar;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel SideHeaderPanel;
+        private System.Windows.Forms.Button CustomerChatBox;
+        private System.Windows.Forms.Button History_btn;
+        private System.Windows.Forms.Button Order_btn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Dashboard_btn;
+        private System.Windows.Forms.Button UserInformation_btn;
     }
 }

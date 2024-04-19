@@ -349,6 +349,11 @@ namespace AttemptZero
             PasswordInput.Text = "";
         }
 
+        private void LoginPanelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void LoginHeaderPanel_Paint(object sender, PaintEventArgs e)
         {
 

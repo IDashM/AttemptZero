@@ -15,18 +15,21 @@ namespace AttemptZero
     public partial class AdminUI : Form
     {
         String sqlcon = @"Data Source=LAPTOP-V5O7M5C5\SQLEXPRESS;Initial Catalog=AttempZero;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-        bool sidebarExpand;
+  
         Form1 form;
         public AdminUI()
         {
             InitializeComponent();
+           
+        }
+        private void AdminUI_Load(object sender, EventArgs e)
+        {
             DashboardHomePanel.Show();
             AddDriverPanel.Hide();
             HistoryPurchasePanel.Hide();
             SalesPanel.Hide();
             ChatBoxPanel.Hide();
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -57,15 +60,21 @@ namespace AttemptZero
 
         }
 
-        private void AdminUI_Load(object sender, EventArgs e)
-        {
-            DashboardHomePanel.Show();
-            AddDriverPanel.Hide();
-            HistoryPurchasePanel.Hide();
-            SalesPanel.Hide();
-            ChatBoxPanel.Hide();
+        private void TotalSale() { 
+            
         }
+        private void OrderRecieved()
+        {
 
+        }
+        private void Total_User()
+        {
+
+        }
+        private void TotalProfit()
+        {
+
+        }
 
 
         private void RecentOrder_btn_Click(object sender, EventArgs e)
@@ -140,19 +149,22 @@ namespace AttemptZero
                     AddDriverPanel.Hide();
                     HistoryPurchasePanel.Hide();
                     SalesPanel.Show();
-                    SalesPanel.Dock("Fill");
+                   
                     ChatBoxPanel.Hide();
                     break;
             }
         }
                 private void CustomerChatBox_Click(object sender, EventArgs e)
                 {
-            toSwitch("CustomerChatBox");
-                    ChatboxCustomer chatbox = new ChatboxCustomer();
-                    chatbox.Show();
+             toSwitch("CustomerChatBox");
+                    
                 }
+        private void AddDriver_Click(object sender, EventArgs e)
+        {
+            toSwitch("addDriver");
+        }
 
-                private void ChatBoxPanel_Paint(object sender, PaintEventArgs e)
+        private void ChatBoxPanel_Paint(object sender, PaintEventArgs e)
                 {
 
                 }
@@ -167,10 +179,17 @@ namespace AttemptZero
 
         }
 
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+   
+        }
+
         private void AdminDashboardPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+     
     }
     }
 
