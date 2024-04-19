@@ -20,6 +20,7 @@ namespace AttemptZero
     {
         //VARIABLES
         string username;
+        String MyPassword = "0912309224827123150Dave";
         int MaxUserNameInput = 30, MaxFirstNameInput = 30, MaxLastNameInput = 30, MaxAddressInput = 50, MaxContactNumberInput = 11;
         bool toCheckEmailVerification = false;
         String PassKey;
@@ -163,7 +164,7 @@ namespace AttemptZero
            
             SendCode();
             string fromEmail = "kickcamp06@gmail.com";
-            string password = "0912309224827123150Dave";
+            string password = MyPassword;
             string toEmail = EmailVerifyText.Text;
             string subject = "Email Verification";
            
